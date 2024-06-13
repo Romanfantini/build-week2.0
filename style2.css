@@ -31,7 +31,7 @@ button{
     border: none;
     margin-right: 30px;
     margin-bottom: 25px;
-    
+
 }
 #timer{
     font-size: 50px;
@@ -68,5 +68,14 @@ button{
 button:hover{
     background-color: #d20094 ;
     opacity: 0.8;
-    box-shadow: 4px 5px 2px 0px #d20094;
+    box-shadow: -2px -2px 3px 5px #d20094;
 }
+
+
+#footer{
+    text-align: center;
+    font-size: 30px;
+    font-family: inter;
+    
+}
+

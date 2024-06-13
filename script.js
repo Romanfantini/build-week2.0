@@ -103,6 +103,9 @@ let maxCount = 10;
 
 //ho fatto questa funzione per avviare il quiz con la prima domanda e che inizia il timer
 function startQuiz() {
+    const footer = document.getElementById('footer');
+    footer.innerText=`Question 1/10`
+
   showQuestion(currentQuestionIndex);
   startTimer();
 }
@@ -112,6 +115,7 @@ function showQuestion(index) {
   const questionContainer = document.getElementById("question-container");
   const questionElement = document.getElementById("question");
   const answersElement = document.getElementById("answers");
+  
   let totalAnswers = [];
 
   // Crea la domanda
@@ -149,12 +153,14 @@ function showQuestion(index) {
 }
 
 function nextQuestion() {
+    const footer = document.getElementById('footer');
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion(currentQuestionIndex);
     timeLeft = 60;
     clearInterval(timer);
     startTimer();
+    footer.innerText=`Question ${currentQuestionIndex+1}/10`
   } else {
       clearInterval(timer);
       alert(`Hai completato il quiz! il tuo punteggio è: ${finalResult}`);
